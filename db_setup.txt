@@ -1,0 +1,37 @@
+--
+-- Table structure for table `areas`
+--
+
+CREATE TABLE IF NOT EXISTS `areas` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` text NOT NULL,
+  `tag` text NOT NULL,
+  `display_order` int(11) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fname` text NOT NULL,
+  `lname` text NOT NULL,
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `password` varchar(50) NOT NULL DEFAULT '',
+  `admin` int(11) NOT NULL DEFAULT '0',
+  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `fname`, `lname`, `email`, `password`, `admin`, `modified`, `created`) VALUES
+(3, 'Austin', 'Ducworth', 'aducworth@gmail.com', '300bf52dd231262bc2b99237e727246d', 1, '2011-04-19 14:23:42', '2011-04-19 14:23:42'),
+(7, 'Rich', 'Yessian', 'rich@blueion.com', '5f4dcc3b5aa765d61d8327deb882cf99', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
